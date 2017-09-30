@@ -1,0 +1,15 @@
+
+<h1 class="cover-heading">
+  <%= @people.length%> matches for <em><%= @name %></em>
+</h1>
+
+<% @people.each do |person| %>
+  <p class="lead">
+    <h2><%= person.name %></h2>
+    <ul>
+      <% person.episodes.each do |episode| %>
+        <li><%= episode.episode.title %> &mdash; <%= episode.episode.show_title %></li>
+      <% end %>
+    </ul>
+  </p>
+<% end %>

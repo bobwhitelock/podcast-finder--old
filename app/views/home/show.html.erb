@@ -1,0 +1,17 @@
+
+<h1 class="cover-heading">Search for someone</h1>
+
+<%= form_tag(search_people_path, method: :get) do %>
+  <p class="lead">
+    <%= text_field_tag(
+      :name,
+      nil,
+      placeholder: 'Enter a name...',
+      class: 'form-control'
+    )
+    %>
+  </p>
+  <p>
+    <%= submit_tag("Go!", class: 'btn btn-large btn-danger') %>
+  </p>
+<% end %>
