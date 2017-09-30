@@ -12,16 +12,15 @@
 
         <% row.each do |episode| %>
           <div class="col-md-3">
-            <a href="<%= episode.episode.urls.ui %>">
+            <a href="<%= episode.player_url %>">
               <div class="card">
-                <%# `gsub` to get the full image URL instead of low resolution thumbnail. %>
-                <img class="card-img-top" src="<%= episode.episode.thumb_image.gsub('thumb_', '') %>">
+                <img class="card-img-top" src="<%= episode.image_url %>">
                 <div class="card-body">
                   <h4 class="card-title">
-                    <%= episode.episode.show_title %>
-                    <em><%= episode.episode.date_created %></em>
+                    <%= episode.show_title %>
+                    <em><%= episode.date %></em>
                   </h4>
-                  <p class="card-text"><%=  episode.episode.title %></p>
+                  <p class="card-text"><%=  episode.title %></p>
                   <%# <a href="#" class="btn btn-primary">Go somewhere</a> %>
                 </div>
               </div>
