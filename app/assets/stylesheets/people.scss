@@ -1,3 +1,14 @@
 // Place all the styles related to the people controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.people-cards {
+  .row {
+    margin-bottom: 1rem;
+  }
+
+  // Make the card stand out on focus (e.g. via tab key) or mouse hover.
+  a:focus .card, .card:hover {
+    opacity: 0.6;
+  }
+}
