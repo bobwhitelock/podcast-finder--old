@@ -4,6 +4,8 @@
 </h1>
 
 <div class='container people-cards'>
+  <%= render 'episode_cards', episodes: @episodes %>
+
   <% @people.each do |person| %>
     <h2><%= person.name %></h2>
     <%= render 'episode_cards', episodes: person.episodes %>
