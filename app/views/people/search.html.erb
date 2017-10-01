@@ -1,13 +1,8 @@
 
 <h1 class="cover-heading">
-  <%= @people.length%> matches for <em><%= @name %></em>
+  <%= @episodes.length %> matches for <em><%= @name %></em>
 </h1>
 
-<div class='container people-cards'>
+<div class='container episode-cards'>
   <%= render 'episode_cards', episodes: @episodes %>
-
-  <% @people.each do |person| %>
-    <h2><%= person.name %></h2>
-    <%= render 'episode_cards', episodes: person.episodes %>
-  <% end %>
 </div>
