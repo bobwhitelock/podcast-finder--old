@@ -4,5 +4,24 @@
 </h1>
 
 <div class='container'>
+  <%= form_for NotificationRequest.new(query: @name) do |f| %>
+
+    <%= f.hidden_field(:query) %>
+
+    <p class='lead'>
+      <%= f.text_field(
+        :email,
+        placeholder: 'Enter your email',
+        required: true,
+        class: 'form-control form-control-lg'
+      )
+      %>
+    </p>
+
+    <p>
+      <%= submit_tag("Send me new matching episodes", class: 'btn btn-large btn-danger') %>
+    </p>
+  <% end %>
+
   <%= render 'episode_cards', episodes: @episodes %>
 </div>

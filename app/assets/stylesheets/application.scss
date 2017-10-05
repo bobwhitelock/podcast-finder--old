@@ -14,8 +14,11 @@
  *= require_self
  */
 
+body {
+  text-shadow: none;
+}
+
 .card {
   color: #333;
   text-align: left;
-  text-shadow: none;
 }
